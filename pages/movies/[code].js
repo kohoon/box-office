@@ -44,7 +44,7 @@ function MovieInfo(props) {
 
 MovieInfo.getInitialProps = async function (context) {
     let url =
-        "http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json";
+        "https://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json";
     url += "?key=5902cbfeb5a92a72b034314befe3d771";
     url += "&movieCd=" + context.query.code;
     try {
