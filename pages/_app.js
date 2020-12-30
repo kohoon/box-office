@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import Router from "next/router";
+import "nprogress/nprogress.css";
+import Nprogress from "nprogress";
+
+Router.events.on("routeChangeStart", () => Nprogress.start());
+Router.events.on("routeChangeComplete", () => Nprogress.done());
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+    return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;
